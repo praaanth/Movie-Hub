@@ -1,0 +1,6 @@
+import React from 'react'
+export {default as Header} from './Header'
+export {default as MainNav} from './MainNav'
+export {default as Movie} from './Movie'
+export {default as CustomPagination} from './CustomPagination'
+export {default as Genres} from './Genres'
