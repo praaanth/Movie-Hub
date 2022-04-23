@@ -32,7 +32,7 @@ function CustomPagination({page, setPage,numOfPages}) {
     <Stack spacing={2}> 
      <Pagination 
        count={numOfPages}
-       page={page}
+      //  page={page}
        color="secondary"
        variant="outlined"
        onChange={handleChange}

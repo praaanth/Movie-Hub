@@ -2,13 +2,15 @@ import { Badge } from '@material-ui/core';
 import React from 'react'
 import  { img_300, unavailable } from '../config/Config'
 import  '../Styles/MovieCard.css'
-function MovieList({movie,isLoading, id}) {
+
+ import ContentModel from '../components/ContentModel';
+function MovieList({movie,isLoading, id, media_type}) {
 
     if(isLoading) return "Loading the Movies Please Wait";
     else if(movie){
         return (
             
-            <div className="movie-card">
+            <ContentModel media_type={media_type} id={id}>
             <Badge badgeContent={movie.vote_average}
                 color={movie.vote_average>6.5 ?'primary' : 'secondary'}
             />
@@ -22,7 +24,7 @@ function MovieList({movie,isLoading, id}) {
 
                      <span >
                          {
-                            movie.name?"Tv Series" : "Movie"
+                            media_type==="tv"?"Tv Series" : "Movie"
                          }
                          </span>
                              <span className='subtitle'>
@@ -33,7 +35,7 @@ function MovieList({movie,isLoading, id}) {
                      </div>
                      
                  
-            </div>
+            </ContentModel>
         )
     }
     else  return null;

@@ -12,7 +12,7 @@ function Trending() {
     const fetchTrending= async () =>{
       setIsLoading(true);
         const { data } = await axios.get(` https://api.themoviedb.org/3/trending/all/day?api_key=628422e76a4eac3150a9be2e93bde782&page=${ page }`);
-          console.log(data);
+        //  console.log(data);
           setContent(data.results);
           setIsLoading(false);
           setNumOfPages(data.total_pages);
@@ -35,6 +35,7 @@ function Trending() {
           content.map((movie) => (
              <Movie movie= {movie} id={movie.id}
              isLoading={isLoading}
+             media_type={movie.media_type}
              />
 
 
