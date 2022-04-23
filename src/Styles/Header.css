@@ -14,7 +14,7 @@
   z-index: 100;
   font-family: "Montserrat", sans-serif;
 }
-
+/* this media query is when it shifts to mobile hedaer moves upwards */
 @media (max-width: 1000px)  {
     .header {
         padding-top: 15px;

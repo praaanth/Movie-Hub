@@ -52,13 +52,12 @@ const Genres = ({
     
     <div className="genres" style={{padding:"6px 0"}}>
     
-    <h1>Genres</h1>
     {
       selectedGenres.map(genre => (
         <Chip
         label={genre.name}
         color="primary"
-              // size="small"
+              size="small"
               style={{margin: "4px"}}
               clickable
               onDelete={() => handleDelete(genre)}

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ContentModal({children,
+export default function ContentModel({children,
     media_type,
     id,
 }) {
@@ -73,9 +73,11 @@ export default function ContentModal({children,
 
 
   return (
-    <div>
+    <>
       <div   className="movie-card" onClick={handleOpen}>
         {children}
+        
+        
       </div>
       <Modal
         aria-labelledby="transition-modal-title"
@@ -150,6 +152,6 @@ export default function ContentModal({children,
           )}
         </Fade>
       </Modal>
-    </div>
+    </>
   );
 }
