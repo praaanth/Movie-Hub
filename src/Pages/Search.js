@@ -79,6 +79,7 @@ function Search() {
         content.map((movie) => (
            <Movie movie= {movie} id={movie.id}
            isLoading={isLoading}
+           media_type={type ? "tv" : "movie"}
            />
 
 
